@@ -2,6 +2,10 @@
 
 ## Getting Started
 
+This backend API follows the Casting Agency models as described in the capstone project instructions.  This API was designed to streamline a company that is responsible for creating movies and managing and assigning actors to those movies. 
+
+## Background
+
 This project is the culminations of lessons learned in Udacity's Full Stack Nanodegree program.  This includes the use of flask sqlalchemy to manage data stored in a relational sql database, creating an API with routes based on the Model View Controller(MVC) design pattern, integrating the API with a 3rd party authentication application, and hosting the application on a cloud-based server.  
 
 In addition, I used the feedback from previous project reviews and incorporated the application factory pattern and blueprints to create a scalable backend application.  
