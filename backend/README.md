@@ -21,11 +21,11 @@ Frontend - https://capstone-frontend-fsnd.herokuapp.com/ (React Frontend)
 
 #### Python 3.8.2
 
-Follow instructions to install the latest version of python for your platform in the [python docs](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python)
+This application was built on the latest version of python
 
 #### Virtual Enviornment
 
-We recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organaized. Instructions for setting up a virual enviornment for your platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
+Navigate to the `/backend` directory and create a virtual environment: 
 
 example setup using virtual env
 ``` virtual env
@@ -34,13 +34,13 @@ source ~env/bin/activate
 
 #### PIP Dependencies
 
-Once you have your virtual environment setup and running, install dependencies by naviging to the `/backend` directory and running:
+Once the virtual environment is setup and running, install dependencies by  running:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-This will install all of the required packages we selected within the `requirements.txt` file.
+This will install all of the required packages within the `requirements.txt` file.
 
 ##### Key Dependencies
 
@@ -72,29 +72,29 @@ flask run
 
 ## Permissions
 
-Users and Roles:  
+The following users were setup with permissions to restrict access to certain routes:  
 
 Casting Assistant:  
  - Login: casting_assistant@email.com
  - Test Password:  test1234!
  - Permissions:    Can view actors and movies
- -  RBAC Permission:  ["get:actors","get:movies"]
+ - RBAC Permission:  ["get:actors","get:movies"]
 
 Casting Director:  
  - Login: casting_director@email.com
  - Test Password:  test1234!
  - Permissions:    
-        * All permissions a Casting Assistant has and…
-        * Add or delete an actor from the database
-        * Modify actors or movies
+        -- All permissions a Casting Assistant has and…
+        -- Add or delete an actor from the database
+        -- Modify actors or movies
  - RBAC Permissions:  ["add:actor","delete:actor","get:actors","get:movies","modify:actors","modify:movies"]
 
 Executive Producer:  
  - Login: executive_producer@email.com
  - Test Password:  test1234!
  - Permissions:    
-        * All permissions a Casting Director has and…
-        * Add or delete a movie from the database
+        -- All permissions a Casting Director has and…
+        -- Add or delete a movie from the database
  - RBAC Permissions:  ["add:actor","add:movie","delete:actor","delete:movie","get:actors","get:movies","modify:actors","modify:movies"]
  
 # Endpoint
