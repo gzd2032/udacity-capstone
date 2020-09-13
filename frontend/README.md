@@ -18,25 +18,27 @@ The backend and frontend are hosted with the free Tier on Heroku.
 Authentication is provide by Auth0 with the following Users created for this project:
 
 Casting Assistant:  
-  Login: casting_assistant@email.com
-  Test Password:  test1234!
-  Permissions:    Can view actors and movies
-  RBAC Permission:  ["get:actors","get:movies"]
+ - Login: casting_assistant@email.com
+ - Test Password:  test1234!
+ - Permissions:    Can view actors and movies
+ -  RBAC Permission:  ["get:actors","get:movies"]
 
 Casting Director:  
-  Login: casting_director@email.com
-  Test Password:  test1234!
-  Permissions:    All permissions a Casting Assistant has and…
-                  Add or delete an actor from the database
-                  Modify actors or movies
-  RBAC Permissions:  ["add:actor","delete:actor","get:actors","get:movies","modify:actors","modify:movies"]
+ - Login: casting_director@email.com
+ - Test Password:  test1234!
+ - Permissions:    
+        * All permissions a Casting Assistant has and…
+        * Add or delete an actor from the database
+        * Modify actors or movies
+ - RBAC Permissions:  ["add:actor","delete:actor","get:actors","get:movies","modify:actors","modify:movies"]
 
 Executive Producer:  
-  Login: executive_producer@email.com
-  Test Password:  test1234!
-  Permissions:    All permissions a Casting Director has and…
-                  Add or delete a movie from the database
-  RBAC Permissions:  ["add:actor","add:movie","delete:actor","delete:movie","get:actors","get:movies","modify:actors","modify:movies"]
+ - Login: executive_producer@email.com
+ - Test Password:  test1234!
+ - Permissions:    
+        * All permissions a Casting Director has and…
+        * Add or delete a movie from the database
+ - RBAC Permissions:  ["add:actor","add:movie","delete:actor","delete:movie","get:actors","get:movies","modify:actors","modify:movies"]
 
 
 
