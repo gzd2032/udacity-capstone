@@ -10,8 +10,8 @@ This frontend relies on the Capsteon Project API Backend.  It provides a user fr
 
 The backend and frontend are hosted with the free Tier on Heroku.
 
-Backend - https://capstone-backend-fsnd.herokuapp.com/  (Flask Python Backend)
-Frontend - https://capstone-frontend-fsnd.herokuapp.com/ (React Frontend)
+* Backend - https://capstone-backend-fsnd.herokuapp.com/  (Flask Python Backend)
+* Frontend - https://capstone-frontend-fsnd.herokuapp.com/ (React Frontend)
 
 ## Permissions
 
