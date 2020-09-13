@@ -9,7 +9,7 @@ from flask import json
 import unittest
 from app import create_app
 from dotenv import load_dotenv
-load_dotenv('.env')
+load_dotenv('.env.test')
 
 
 class AppTestCase(unittest.TestCase):
