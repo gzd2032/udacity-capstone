@@ -2,6 +2,5 @@ __pycache__
 env
 .git
 migrations
-.flaskenv
 config.dev.py
 .vscode
