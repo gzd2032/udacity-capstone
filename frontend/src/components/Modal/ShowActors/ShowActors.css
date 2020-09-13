@@ -1,0 +1,47 @@
+.labelColumn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.listActors {
+    width: 100%;
+    justify-content: flex-start;
+    border: thin solid gray;
+    margin: 2px 4px;
+    color: white;
+    background: gray;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.listActors div{
+    padding: 0.2rem 1rem;
+}
+.listActors .actorId {
+    width: 30px;
+    font-size: 0.7rem;
+}
+
+.actorForm {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.nameColumn {
+    display: flex;
+    flex-direction: column;
+
+}
+
+@media (max-width: 526px) {
+    .actorId {
+        display: none;
+    }
+
+    .actorName {
+        width: 20%;
+    }
+
+}

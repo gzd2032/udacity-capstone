@@ -1,0 +1,103 @@
+.modalStyle {
+    position: fixed;
+    top: 10%;
+    left: 15%;
+    transform: 'translate(-50%, -50%)';
+    transition: 0.3s;
+    background: #fff;
+    padding: 50px;
+    z-index: 1000;
+    overflow-y: auto;
+    max-height: calc(100vh - 2rem);
+
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.formDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+.formDetails label {
+    margin: 0.5rem;
+}
+
+.formDetails h1,
+.formDetails h3 {
+    text-align: center;
+}
+
+.modalButtons {
+    text-align: right;
+}
+
+.modalButtons button {
+    margin: .375rem;
+    margin-top: 1rem;
+    text-transform: capitalize;
+    white-space: normal;
+    border-radius: .125rem;
+    background-color: #4285f4;
+    border: 0;
+    color: white;
+    padding: 0.6rem 2rem;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+}
+
+.formDetails form {
+    margin-bottom: 1rem;
+    justify-content: flex-end;
+}
+
+.formDetails input {
+    padding: 0.2rem 0.5rem;
+    font-size: 1rem;
+}
+
+.formDetails label {
+    display: inline-block;
+}
+
+.closeBtn {
+    display: inline;
+    padding: 0.3rem 0.6rem;
+    float: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #4285f4;
+    color: white;
+    border: 0px;
+    font-weight: bolder;
+    margin-top: -22px;
+}
+
+.actorList input {
+    padding: 0.3rem 0.5rem;
+    margin: 0.5rem;
+
+}
+
+.actorName {
+    width: 45%;
+}
+
+@media (max-width: 526px) {
+    .modalStyle {
+        top: 1%;
+        left: 1%;
+        padding: 10px;
+    }
+
+    .closeBtn {
+        margin-top: 15px;
+    }
+
+}

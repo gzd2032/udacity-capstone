@@ -1,0 +1,55 @@
+.itemHeader {
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.itemTitle {
+    padding: 1rem 2rem;
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.itemContent {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.itemList {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 4.6rem;
+
+}
+
+.itemContainer {
+    border: thin solid black;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.62);
+    padding: 1.5rem 0.5rem;
+    background: white;
+    display: inline-grid;
+    max-width: 400px;
+    border: thin;
+}
+
+.itemContainer p {
+    margin: 0 0.5rem;
+}
+
+.itemContainer .name {
+    font-weight: bold;
+
+}
+
+.itemContainer .keyName {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+
+.itemContainer .keyItem {
+
+}

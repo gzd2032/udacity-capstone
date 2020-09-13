@@ -1,0 +1,66 @@
+<!-- template format from https://jinja.palletsprojects.com/en/2.10.x/templates/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+{% set navigation_bar = [
+    ('/', 'index', 'Home'),
+    (app_location, 'app', 'App')
+] %}
+{% set active_page = active_page|default('index') -%}
+<div class="container mt-2 pt-1">
+
+<!--Navbar from MDBootstrap-->
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark primary-color">
+<a class="navbar-brand" href="/"><i class="fas fa-globe-americas fa-2x"></i></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+    <ul class="navbar-nav mr-auto">
+    {% for href, id, caption in navigation_bar %}
+        {% if href != null %}
+        <li class="nav-item m-1 {% if id == active_page %}active{% endif
+            %}"><a class="nav-link"  href="{{ href|e }}">{{ caption|e }}
+            <span class="sr-only">(current)</span>
+            </a></li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+</div>
+</nav>
+<!--/.Navbar -->
+<br>
+<div class="container mb-5 mt-3">
+    {% block content %}{% endblock %}
+</div>
+
+</div>
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+<!-- Static Scripts -->
+<script type="text/javascript" src="{{url_for('static', filename='js/script.js')}}"></script>
+
+</body>
+</html>
