@@ -1,0 +1,10 @@
+=== capstone-backend-fsnd Config Vars
+APP_HOME:            https://capstone-backend-fsnd.herokuapp.com/
+APP_LOCATION:        https://capstone-frontend-fsnd.herokuapp.com/
+AUTH0_ALGORITHM:     ['RS256']
+AUTH0_AUDIENCE:      capstone
+AUTH0_CALLBACK_URL:  https://capstone-backend-fsnd.herokuapp.com/callback
+AUTH0_CLIENT_ID:     KLgbm50Cz09HTyvVQy64nfQz7SUSZCXd
+AUTH0_CLIENT_SECRET: j_Cn1ahJVa2osNfLyr6Jog6S_4Rm5qCMhjyTndRHKxn6dZZaUFOjFsJfaSEjvrb0
+AUTH0_DOMAIN:        devproj3.us.auth0.com
+DATABASE_URL:        postgres://wbqmlgcycxsjvy:278189685aca9f3a8619d0de4af67b114b8cbe3000df7540032f13585f6601df@ec2-100-25-100-81.compute-1.amazonaws.com:5432/dd50jk38ib54pu
