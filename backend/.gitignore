@@ -4,3 +4,5 @@ env
 migrations
 config.dev.py
 .vscode
+.env
+.flaskenv
