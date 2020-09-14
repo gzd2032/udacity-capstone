@@ -14,10 +14,10 @@ import json
 
 main = Blueprint('main', __name__)
 
-CORS(main)
+CORS(main, resources={r"/*": {"origins": "*"}})
 
 
-@main.route('/')
+@main.route('/', methods=['GET'])
 def index():
     if 'profile' in session:
         return render_template('index.html',
@@ -27,7 +27,7 @@ def index():
     return render_template('index.html')
 
 
-@main.route('/movies')
+@main.route('/movies', methods=['GET'])
 @requires_auth('get:movies')
 def get_movies(payload):
     try:
@@ -43,7 +43,7 @@ def get_movies(payload):
         abort(400)
 
 
-@main.route('/movies/<int:movie_id>')
+@main.route('/movies/<int:movie_id>', methods=['GET'])
 @requires_auth('get:movies')
 def get_movie_detail(payload, movie_id):
     try:
@@ -123,7 +123,7 @@ def update_movie(payload, movie_id):
         abort(400)
 
 
-@main.route('/actors')
+@main.route('/actors', methods=['GET'])
 @requires_auth('get:actors')
 def get_actors(payload):
     try:
@@ -139,7 +139,7 @@ def get_actors(payload):
         abort(400)
 
 
-@main.route('/actors/<int:actor_id>')
+@main.route('/actors/<int:actor_id>', methods=['GET'])
 @requires_auth('get:actors')
 def get_actor_details(payload, actor_id):
     try:
